@@ -1,25 +1,35 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose"; // Import Mongoose
 
+// Create schema for donation records
 const donationSchema = new mongoose.Schema(
   {
     donorName: {
-      type: String,
-      required: true,
+      type: String, // Donor name
+      required: true, // Required field
+    },
+    mobileNumber: {
+      type: String, // Donor mobile number
+      required: true, // Required field
+    },
+    address: {
+      type: String, // Donor address
+      required: true, // Required field
+    },
+    message: {
+      type: String, // Optional donor message
+      default: "", // Default blank
     },
     amount: {
-      type: String,
-      required: true,
+      type: String, // Donation amount
+      required: true, // Required field
     },
     walletAddress: {
-      type: String,
-      required: true,
+      type: String, // MetaMask wallet address
+      required: true, // Required field
     },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true } // Automatically add createdAt and updatedAt
 );
 
-const Donation = mongoose.model("Donation", donationSchema);
-
-export default Donation;
+// Export model
+export default mongoose.model("Donation", donationSchema);
