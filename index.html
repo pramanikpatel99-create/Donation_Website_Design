@@ -18,8 +18,6 @@
 </head>
 
 <body>
-    <div class="fixed-top">
-
         <header>
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -29,6 +27,10 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                    <button id="connectWalletBtn">Connect Wallet</button>
+                    <button id="donateBtn">Donate 0.01 ETH</button>
+                    <p id="walletAddress"></p>
+                    <p id="transactionStatus"></p>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
@@ -298,6 +300,10 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.2/dist/ethers.umd.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/web3.js"></script>
+    <div class="fixed-top">
 </body>
 
 </html>
